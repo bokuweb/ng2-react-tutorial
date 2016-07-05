@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <title>ng2 comment system</title>
+    </head>
+    <body>
+        <comment-box>Loading...</comment-box>
+        <script src="node_modules/es6-shim/es6-shim.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/zone.js/dist/zone.js"></script>
+        <script>
+         System.import('system-config.js')
+               .then(function () {
+                   System.import('app/main');
+               })
+               .catch(console.error.bind(console));
+        </script>
+    </body>
+</html>
