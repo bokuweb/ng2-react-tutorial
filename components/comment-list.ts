@@ -1,9 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { CommentItem } from './comment-item';
 
 @Component({
   selector: 'comment-list',
-  directives: [CommentItem],
   template: `
     <div class="comment-list">
       <div *ngFor="let comment of comments">

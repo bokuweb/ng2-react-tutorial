@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CommentList } from './comment-list';
-import { CommentForm } from './comment-form';
 import { CommentService } from '../service/comment';
 import Comment from '../interfaces/comment';
 
 @Component({
   selector: 'comment-box',
   providers: [CommentService],
-  directives: [CommentList, CommentForm],
   template: `
     <div class="commentBox">
       <h1>Comments</h1>

@@ -4,6 +4,11 @@
       "id": 0,
       "author": "foo",
       "text": "bar"
+    },
+    {
+      "author": "asd",
+      "text": "asd",
+      "id": 1
     }
   ]
 }
