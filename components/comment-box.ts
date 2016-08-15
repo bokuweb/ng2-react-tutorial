@@ -4,6 +4,7 @@ import { Comment } from '../interfaces/comment';
 import { Observable, Observer } from 'rxjs';
 import { Action } from '../actions/action';
 import { state, dispatcher } from '../store/state-and-dispatcher';
+import { AddCommentAction, FetchCommentAction } from '../actions/action';
 
 @Component({
   selector: 'comment-box',
@@ -27,9 +28,9 @@ export class CommentBox implements OnInit {
   }
 
   ngOnInit() {
-    // this.commentService
-    //  .startIntervalFetch()
-    //  .subscribe(comments => this.comments = comments);
+    this.commentService
+      .startIntervalFetch()
+      .subscribe(comments => this.dispatcher.next(new FetchCommentAction(comments)));
   }
 
   handleCommentSubmit(comment) {

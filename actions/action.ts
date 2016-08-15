@@ -13,7 +13,13 @@ export class AddCommentAction {
 }
 
 export class FetchCommentAction {
-  constructor() {}
+  public payload: {
+    comments: Comment[];
+  }
+
+  constructor(comments: Comment[]) {
+    this.payload = { comments };
+  }
 }
 
 export type Action = AddCommentAction | FetchCommentAction;
