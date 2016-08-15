@@ -13,7 +13,6 @@ export const stateAndDispatcher = [
     useValue: [],
   }, {
     provide: dispatcher,
-    // useValue: new Subject<Action>(null)
     useValue: new Subject()
   }, {
     provide: state,

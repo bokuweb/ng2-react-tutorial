@@ -37,6 +37,6 @@ export class CommentBox implements OnInit {
     comment.id = this.comments.length;
     this.commentService
       .add(comment)
-      .subscribe(res => this.comments.push(res));
+      .subscribe(res => this.dispatcher.next(new AddCommentAction(comment)));
   }
 }
