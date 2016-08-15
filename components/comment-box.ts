@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { CommentService } from '../service/comment';
 import { Comment } from '../interfaces/comment';
+import { Observable, Observer } from 'rxjs';
+import { Action } from '../actions/action';
+import { state, dispatcher } from '../store/state-and-dispatcher';
 
 @Component({
   selector: 'comment-box',
@@ -17,13 +20,16 @@ export class CommentBox implements OnInit {
 
   comments: Comment[];
 
-  constructor(private commentService: CommentService) {
+  constructor(private commentService: CommentService,
+              @Inject(state) private state: Observable<Comment[]>,
+              @Inject(dispatcher) private dispatcher: Observer<Action>) {
+    this.state.subscribe(comments => this.comments = comments);
   }
 
   ngOnInit() {
-    this.commentService
-      .startIntervalFetch()
-      .subscribe(comments => this.comments = comments);
+    // this.commentService
+    //  .startIntervalFetch()
+    //  .subscribe(comments => this.comments = comments);
   }
 
   handleCommentSubmit(comment) {

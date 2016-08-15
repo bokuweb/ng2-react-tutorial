@@ -3,11 +3,11 @@ import { Subject } from 'rxjs';
 import { Action } from '../actions/action';
 import { stateFn } from '../store';
 
-const initState = new OpaqueToken("initState");
-const dispatcher = new OpaqueToken("dispatcher");
-const state = new OpaqueToken("state");
+export const initState = new OpaqueToken("initState");
+export const dispatcher = new OpaqueToken("dispatcher");
+export const state = new OpaqueToken("state");
 
-const stateAndDispatcher = [
+export const stateAndDispatcher = [
   {
     provide: initState,
     useValue: [],
