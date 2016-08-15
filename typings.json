@@ -2,8 +2,11 @@
   "name": "ng2-comment-tutorial",
   "dependencies": {},
   "globalDependencies": {
+    "empower": "registry:dt/empower#0.0.0+20160317120654",
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504",
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
-    "marked": "registry:dt/marked#0.0.0+20160325085301"
+    "marked": "registry:dt/marked#0.0.0+20160325085301",
+    "power-assert": "registry:dt/power-assert#0.0.0+20160316155526",
+    "power-assert-formatter": "registry:dt/power-assert-formatter#0.0.0+20160317120654"
   }
 }

@@ -9,8 +9,6 @@ import { CommentItem } from '../components/comment-item';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { CommentBox } from '../components/comment-box';
 
-// bootstrap(CommentBox, [HTTP_PROVIDERS]);
-
 @NgModule({
   declarations: [
     CommentBox,

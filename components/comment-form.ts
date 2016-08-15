@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { CommentList } from './comment-list';
 import { CommentService } from '../service/comment';
-import Comment from '../interfaces/comment';
+import { Comment } from '../interfaces/comment';
 
 @Component({
   selector: 'comment-form',
